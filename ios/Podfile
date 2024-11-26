@@ -1,0 +1,17 @@
+# NOTE Set ios > 10.3
+platform :ios, '12.0'
+
+# NOTE use_frameworks!
+use_frameworks!
+use_modular_headers!
+
+
+target 'Runner' do
+  # Pods for Runner
+  target 'RunnerTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+

@@ -15,7 +15,7 @@ class DynamicIconService {
 
   Future<void> setAlternateIconName(String? iconName,
       {bool showAlert = true}) async {
-    print("in Func : ${iconName} - ${showAlert}");
+    print("setAlternateIconName : ${iconName}");
     await _channel.invokeMethod('setAlternateIconName', {
       'iconName': iconName,
       'showAlert': showAlert,

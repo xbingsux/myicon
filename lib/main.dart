@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
           ElevatedButton(
             onPressed: () async {
               bool isSupported = await _iconService.supportsAlternateIcons();
-              print('Supports Alternate Icons: $isSupported');
+              // print('Supports Alternate Icons: $isSupported');
             },
             child: Text('Check Icon Support'),
           ),
@@ -88,7 +88,7 @@ class _HomeState extends State<Home> {
             onPressed: () async {
               await _iconService.setAlternateIconName('ChristmasIcon',
                   showAlert: false);
-              print('Icon Changed to christmas');
+              // print('Icon Changed to christmas');
             },
             child: Text('christmas Icon'),
           ),
@@ -96,7 +96,7 @@ class _HomeState extends State<Home> {
             onPressed: () async {
               await _iconService.setAlternateIconName('NewyearIcon',
                   showAlert: false);
-              print('Icon Changed to newyear');
+              // print('Icon Changed to newyear');
             },
             child: Text('newyear Icon'),
           ),
@@ -104,14 +104,14 @@ class _HomeState extends State<Home> {
             onPressed: () async {
               await _iconService.setAlternateIconName('HelloIcon',
                   showAlert: false);
-              print('HelloIcon');
+              // print('HelloIcon');
             },
             child: Text('HelloIcon'),
           ),
           ElevatedButton(
             onPressed: () async {
               await _iconService.setAlternateIconName(null, showAlert: false);
-              print('Primary');
+              // print('Primary');
             },
             child: Text('Primary'),
           ),

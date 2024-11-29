@@ -49,10 +49,11 @@ dev_dependencies:
   flutter_launcher_icons: ^0.14.1
 
 flutter_launcher_icons:
-  androidn: false
-  ios: true
-  image_path: "assets/icons/appicon.png"
-
+  android: true
+  ios: false
+  image_path: "assets/icons/appicon4.png"
+  adaptive_icon_background: "#FFFFFF" # เพิ่มสีพื้นหลัง
+  adaptive_icon_foreground: "assets/icons/appicon4.png"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

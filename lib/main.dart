@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
           ElevatedButton(
             onPressed: () async {
               bool isSupported = await _iconService.supportsAlternateIcons();
-              // print('Supports Alternate Icons: $isSupported');
+              print('Supports Alternate Icons: $isSupported');
             },
             child: Text('Check Icon Support'),
           ),

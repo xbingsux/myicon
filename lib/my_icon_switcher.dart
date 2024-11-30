@@ -1,9 +1,8 @@
 //NOTE Flutter Connect to Native Code
 import 'package:flutter/services.dart';
 
-class DynamicIconService {
-  static const MethodChannel _channel =
-      MethodChannel('flutter_dynamic_icon_plus');
+class MyIconSwitcher {
+  static const MethodChannel _channel = MethodChannel('my_icon_switcher');
 
   Future<bool> supportsAlternateIcons() async {
     return await _channel.invokeMethod('supportsAlternateIcons');

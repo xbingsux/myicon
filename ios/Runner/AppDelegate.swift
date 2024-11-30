@@ -9,8 +9,8 @@ import UIKit
   ) -> Bool {
     GeneratedPluginRegistrant.register(with: self)
     //NOTE Register Plugin
-    if let registrar = self.registrar(forPlugin: "FlutterDynamicIconPlusPlugin") {
-        FlutterDynamicIconPlusPlugin.register(with: registrar)
+    if let registrar = self.registrar(forPlugin: "MyIconSwitcherPlugin") {
+        MyIconSwitcherPlugin.register(with: registrar)
     }
     //END NOTE
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)

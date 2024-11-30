@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'dynamic_icon_service.dart';
+import 'my_icon_switcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,11 +35,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final DynamicIconService _iconService = DynamicIconService();
+  final MyIconSwitcher myIconSwitcher = MyIconSwitcher();
   TextEditingController controller = TextEditingController();
 
   Future<void> getIconName() async {
-    final iconName = await _iconService.getAlternateIconName();
+    final iconName = await myIconSwitcher.getAlternateIconName();
     print('Current Icon Name: ${iconName ?? "Primary Icon"}');
   }
 
@@ -63,7 +63,7 @@ class _HomeState extends State<Home> {
                   icon: const Icon(Icons.send),
                   onPressed: () async {
                     if (Platform.isIOS) {
-                      await _iconService.setApplicationIconBadgeNumber(
+                      await myIconSwitcher.setApplicationIconBadgeNumber(
                           int.parse(controller.text));
                     }
                   },
@@ -73,7 +73,7 @@ class _HomeState extends State<Home> {
           ),
           ElevatedButton(
             onPressed: () async {
-              bool isSupported = await _iconService.supportsAlternateIcons();
+              bool isSupported = await myIconSwitcher.supportsAlternateIcons();
               print('Supports Alternate Icons: $isSupported');
             },
             child: Text('Check Icon Support'),
@@ -86,7 +86,7 @@ class _HomeState extends State<Home> {
           ),
           ElevatedButton(
             onPressed: () async {
-              await _iconService.setAlternateIconName('ChristmasIcon',
+              await myIconSwitcher.setAlternateIconName('ChristmasIcon',
                   showAlert: false);
               // print('Icon Changed to christmas');
             },
@@ -94,7 +94,7 @@ class _HomeState extends State<Home> {
           ),
           ElevatedButton(
             onPressed: () async {
-              await _iconService.setAlternateIconName('NewyearIcon',
+              await myIconSwitcher.setAlternateIconName('NewyearIcon',
                   showAlert: false);
               // print('Icon Changed to newyear');
             },
@@ -102,7 +102,7 @@ class _HomeState extends State<Home> {
           ),
           ElevatedButton(
             onPressed: () async {
-              await _iconService.setAlternateIconName('HelloIcon',
+              await myIconSwitcher.setAlternateIconName('HelloIcon',
                   showAlert: false);
               // print('HelloIcon');
             },
@@ -110,14 +110,14 @@ class _HomeState extends State<Home> {
           ),
           ElevatedButton(
             onPressed: () async {
-              await _iconService.setAlternateIconName(null, showAlert: false);
+              await myIconSwitcher.setAlternateIconName(null, showAlert: false);
               // print('Primary');
             },
             child: Text('Primary'),
           ),
           ElevatedButton(
             onPressed: () async {
-              await _iconService.setApplicationIconBadgeNumber(5);
+              await myIconSwitcher.setApplicationIconBadgeNumber(5);
               print('Badge Number Set to 5');
             },
             child: Text('Set Badge Number to 5'),

@@ -19,12 +19,12 @@ samples, guidance on mobile development, and a full API reference.
 iOS
 # ไฟล์ที่สร้างขึ้นมาใหม่ 
     # lib/dynamic_icon_service.dart
-    # ios/Runner/FlutterDynamicIconPlusPlugin.swift
+    # ios/Runner/MyIconSwitcherPlugin.swift
     # แก้ไข 
-    if let registrar = self.registrar(forPlugin: "FlutterDynamicIconPlusPlugin") {
-        FlutterDynamicIconPlusPlugin.register(with: registrar)
+    if let registrar = self.registrar(forPlugin: "MyIconSwitcherPlugin") {
+        MyIconSwitcherPlugin.register(with: registrar)
     }
-# Add File "FlutterDynamicIconPlusPlugin.swift" to Runner in Xcode
+# Add File "MyIconSwitcherPlugin.swift" to Runner in Xcode
 # สร้าง Icon ด้วย flutter_launcher_icons และเปลี่ยนชื่อ Folder ใน /ios/Runner/Assets.xcassets
 # แก้ไข Info.plist
 # Runner -> Build Setting -> 

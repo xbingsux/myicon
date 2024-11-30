@@ -15,8 +15,8 @@ import io.flutter.plugin.common.MethodChannel.Result
 import kotlinx.coroutines.CoroutineScope
 
 
-/** FlutterDynamicIconPlusPlugin */
-class FlutterDynamicIconPlusPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
+/** MyIconSwitcherPlugin */
+class MyIconSwitcherPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
   /// The MethodChannel that will the communication between Flutter and native Android
   ///
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
@@ -25,7 +25,7 @@ class FlutterDynamicIconPlusPlugin: FlutterPlugin, MethodCallHandler, ActivityAw
   private var activity: Activity? = null
 
   companion object {
-    const val pluginName = "flutter_dynamic_icon_plus"
+    const val pluginName = "my_icon_switcher"
     const val appIcon = "app_icon"
   }
 
@@ -68,8 +68,8 @@ class FlutterDynamicIconPlusPlugin: FlutterPlugin, MethodCallHandler, ActivityAw
               }
             }
             else {
-              val flutterDynamicIconPlusService = Intent(activity, FlutterDynamicIconPlusService::class.java)
-              activity?.startService(flutterDynamicIconPlusService)
+              val MyIconSwitcherService = Intent(activity, MyIconSwitcherService::class.java)
+              activity?.startService(MyIconSwitcherService)
             }
 
             result.success(true)

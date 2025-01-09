@@ -45,8 +45,8 @@
             android:targetActivity=".MainActivity"
             android:exported="true"
             android:enabled="false"
-            android:icon="@mipmap/ic_christmas"
-            android:roundIcon="@mipmap/ic_christmas">
+            android:icon="@mipmap/ic_newyear"
+            android:roundIcon="@mipmap/ic_newyear">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

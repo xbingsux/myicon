@@ -2,10 +2,10 @@
 import Flutter
 import UIKit
 
-public class FlutterDynamicIconPlusPlugin: NSObject, FlutterPlugin {
+public class MyIconSwitcherPlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {
-        let channel = FlutterMethodChannel(name: "flutter_dynamic_icon_plus", binaryMessenger: registrar.messenger())
-        let instance = FlutterDynamicIconPlusPlugin()
+        let channel = FlutterMethodChannel(name: "my_icon_switcher", binaryMessenger: registrar.messenger())
+        let instance = MyIconSwitcherPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)
     }
 
